@@ -1,28 +1,34 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Container } from "../../global"
+import { Section, Container } from "../global"
 
 const Products = () => (
-  <Section id="products">
+  <Section id="softwares">
     <StyledContainer>
-      <Subtitle>Products</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <Subtitle>Softwares</Subtitle>
+      <SectionTitle>Available Software as a Service</SectionTitle>
         <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Point of Sale</FeatureTitle>
           <FeatureText>
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Inventory</FeatureTitle>
+          <FeatureText>
+            Receive budget and spending alerts based on your favorite triggers.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Space Market</FeatureTitle>
           <FeatureText>
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
@@ -78,6 +84,7 @@ const FeatureTitle = styled.h4`
   line-height: 30px;
   margin-bottom: 10px;
 `
+
 
 const FeatureText = styled.p`
   text-align: center;
