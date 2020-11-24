@@ -8,10 +8,10 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(sourceInstanceName: { eq: "vacuum" }, name: { eq: "vacuum-logo" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
