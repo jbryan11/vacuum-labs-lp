@@ -6,9 +6,9 @@ import { Section, Container } from "../../global"
 const Products = () => (
   <Section id="products">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
+      <Subtitle>Products</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
-      
+        <FeaturesGrid>
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
           <FeatureText>
@@ -27,6 +27,7 @@ const Products = () => (
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
+        </FeaturesGrid>
     </StyledContainer>
   </Section>
 )
@@ -54,7 +55,7 @@ const Subtitle = styled.h5`
 const FeaturesGrid = styled.div`
   max-width: 670px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -66,7 +67,7 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content:flex-start;
+  justify-content:center;
   align-items: center;
   flex-direction: column;
 `
