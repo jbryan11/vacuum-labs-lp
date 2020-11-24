@@ -1,26 +1,37 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Container } from "../global"
+import { Section, Container } from "../../global"
 
-const Features = () => (
-  <Section id="features">
+const Products = () => (
+  <Section id="products">
     <StyledContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Smart money management</SectionTitle>
-      <FeaturesGrid>
+      
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
           <FeatureText>
             Receive budget and spending alerts based on your favorite triggers.
           </FeatureText>
         </FeatureItem>
-      </FeaturesGrid>
+        <FeatureItem>
+          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureText>
+            Receive budget and spending alerts based on your favorite triggers.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureText>
+            Receive budget and spending alerts based on your favorite triggers.
+          </FeatureText>
+        </FeatureItem>
     </StyledContainer>
   </Section>
 )
 
-export default Features
+export default Products
 
 const StyledContainer = styled(Container)``
 
@@ -55,7 +66,7 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   flex-direction: column;
 `
