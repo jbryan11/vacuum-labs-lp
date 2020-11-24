@@ -8,9 +8,8 @@ import { Container } from "../global"
 const Header = () => {
   const headImg = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "/vacuum/vacuum-logo.png" }) {
-        childImageSharp {
-       
+      file(relativePath: { eq: "product/vacuum-logo.png" }) {
+        childImageSharp {      
           fixed(max-width:1000px) {
             ...GatsbyImageSharpFluid
           }
