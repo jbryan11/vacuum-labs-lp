@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-saas-marketing",
+  "name": "vacuum-labs",
   "private": true,
-  "description": "A simple one page marketing starter for saas companies",
+  "description": "Manufacturing softwares tested outside its boundaries.",
   "version": "0.1.0",
-  "author": "Keegan Burkett <keegan.t.marciniak@gmail.com>",
+  "author": "John Bryan Delda <mightypirates174@gmail.com>",
   "dependencies": {
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
