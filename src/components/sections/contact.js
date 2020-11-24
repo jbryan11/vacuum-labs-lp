@@ -7,7 +7,7 @@ const Contact = () => (
   <StyledSection>
     <ContactContainer id="contact">
       <ContactTitle>Contact Us</ContactTitle>
-      <TryItButton>We circle around the Globe.</TryItButton>
+      <TryItButton >We circle around the Globe.</TryItButton>
       <Subtitle>No credit card required.</Subtitle>
     </ContactContainer>
   </StyledSection>
