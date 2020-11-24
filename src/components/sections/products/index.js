@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Container } from "../global"
+import { Section, Container } from "../../global"
 
 const Products = () => (
   <Section id="products">
@@ -66,7 +66,7 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   flex-direction: column;
 `
