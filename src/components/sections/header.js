@@ -42,7 +42,7 @@ const Header = () => {
             </HeaderForm>
             <FormSubtitle>
               Let us help you and your business
-              <FormSubtitleLink to="/contact">Contact Us</FormSubtitleLink>
+              <FormSubtitleLink to="#contact">Contact Us</FormSubtitleLink>
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
