@@ -5,11 +5,66 @@ import Img from "gatsby-image"
 import { Section, Container } from "../global"
 
 const Services = () => {
-  const dataImg = useStaticQuery(graphql`
+  const wappImg = useStaticQuery(graphql`
   query {
-    file(relativePath: { eq: "gatsby-astronaut.png" }) {
+    file(relativePath: { eq: "vacuum/today-apps-30.png" }) {
+      childImageSharp {
+        fluid(maxWidth:90, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const stdImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/software-30.png" }) {
       childImageSharp {
         fluid(maxWidth:80, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const iotImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/iot-sensor-50.png" }) {
+      childImageSharp {
+        fluid(maxWidth:100, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const cmsImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/plesk-50.png" }) {
+      childImageSharp {
+        fluid(maxWidth:100, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const ecommImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/online-shop-64.png" }) {
+      childImageSharp {
+        fluid(maxWidth:98, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const entrImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/enterprise-resource-planning-64.png" }) {
+      childImageSharp {
+        fluid(maxWidth:98, quality:100) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
@@ -24,7 +79,7 @@ const Services = () => {
         <FeaturesGrid>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={wappImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Web Apps</FeatureTitle>
           <FeatureText>
@@ -33,7 +88,7 @@ const Services = () => {
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={stdImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Standalone</FeatureTitle>
           <FeatureText>
@@ -42,7 +97,7 @@ const Services = () => {
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={iotImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>IoT</FeatureTitle>
           <FeatureText>
@@ -51,7 +106,7 @@ const Services = () => {
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={cmsImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>CMS</FeatureTitle>
           <FeatureText>
@@ -60,7 +115,7 @@ const Services = () => {
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={ecommImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>eCommerce</FeatureTitle>
           <FeatureText>
@@ -69,7 +124,7 @@ const Services = () => {
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={entrImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Enterprise</FeatureTitle>
           <FeatureText>

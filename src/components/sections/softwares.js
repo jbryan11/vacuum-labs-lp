@@ -6,11 +6,44 @@ import { Section, Container } from "../global"
 
 
 const Softwares = () => {
-  const dataImg = useStaticQuery(graphql`
+  const posImg = useStaticQuery(graphql`
   query {
-    file(relativePath: { eq: "gatsby-astronaut.png" }) {
+    file(relativePath: { eq: "vacuum/pos-terminal-100.png" }) {
       childImageSharp {
-        fluid(maxWidth:80, quality:100) {
+        fluid(maxWidth:100, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const accountingImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/accounting-100.png" }) {
+      childImageSharp {
+        fluid(maxWidth:100, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const invImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/inventory-64.png" }) {
+      childImageSharp {
+        fluid(maxWidth:98, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+const smImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "vacuum/online-shop-100.png" }) {
+      childImageSharp {
+        fluid(maxWidth:100, quality:100) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
@@ -25,7 +58,7 @@ return(
       <FeaturesGrid>
         <FeatureItem>
           <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={posImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>POS</FeatureTitle>
           <FeatureText>
@@ -34,7 +67,7 @@ return(
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={accountingImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
@@ -43,7 +76,7 @@ return(
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={invImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Inventory</FeatureTitle>
           <FeatureText>
@@ -53,7 +86,7 @@ return(
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+            <SoftwareImage fluid={smImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>SpaceMart</FeatureTitle>
           <FeatureText>
