@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { Section, Container } from "../global"
 import Img from "gatsby-image"
+import { Section, Container } from "../global"
 
 
 const Softwares = () => {

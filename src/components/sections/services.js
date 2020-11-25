@@ -1,45 +1,76 @@
 import React from "react"
 import styled from "styled-components"
-
+import { graphql, useStaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
 import { Section, Container } from "../global"
 
-const Services = () => (
+const Services = () => {
+  const dataImg = useStaticQuery(graphql`
+  query {
+    file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      childImageSharp {
+        fluid(maxWidth:80, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`)
+  return(
   <Section id="services">
     <StyledContainer>
       <Subtitle>Services</Subtitle>
       <SectionTitle>We Automate and Develop</SectionTitle>
         <FeaturesGrid>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>Web Apps</FeatureTitle>
           <FeatureText>
             Apps that needed to be live on the internet. Ready to deploy.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>Standalone</FeatureTitle>
           <FeatureText>
             Softwares that runs on local environments.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>IoT</FeatureTitle>
           <FeatureText>
            Solution that is made for realtime applications running on embedded devices.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>CMS</FeatureTitle>
           <FeatureText>
             Manage your content around the web.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>eCommerce</FeatureTitle>
           <FeatureText>
             We can help you connect your customers to your business.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
+        <ImageWrapper>
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
+          </ImageWrapper>
           <FeatureTitle>Enterprise</FeatureTitle>
           <FeatureText>
             Business problems that persists, we are here to help.
@@ -48,7 +79,8 @@ const Services = () => (
         </FeaturesGrid>
     </StyledContainer>
   </Section>
-)
+  )
+}
 
 export default Services
 
@@ -99,4 +131,21 @@ const FeatureTitle = styled.h4`
 
 const FeatureText = styled.p`
   text-align: center;
+`
+const SoftwareImage = styled(Img)`
+  width: 100px;
+  @media (max-width: ${(props) => props.theme.screen.md}) {
+    width: 100px;
+  }
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
+    width: 80px;
+    display: none;
+  }
+`
+const ImageWrapper = styled.div`
+  justify-self: end;
+  align-self: center;
+  @media (max-width: ${(props) => props.theme.screen.md}) {
+    justify-self: center;
+  }
 `
