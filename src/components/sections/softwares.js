@@ -3,34 +3,34 @@ import styled from "styled-components"
 
 import { Section, Container } from "../global"
 
-const Products = () => (
+const Softwares = () => (
   <Section id="softwares">
     <StyledContainer>
       <Subtitle>Softwares</Subtitle>
-      <SectionTitle>Available Software as a Service</SectionTitle>
+      <SectionTitle>Software as a Service</SectionTitle>
         <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Point of Sale</FeatureTitle>
+          <FeatureTitle>POS</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            A cashier's friend. Manages payments and services in your store.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            Keep your finances on track. No more manual computations needed.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Inventory</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            Keep records of your stocks and products to monitor daily consumptions.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Space Market</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            An ecommerce site that you can sell your items all around the globe.
           </FeatureText>
         </FeatureItem>
         </FeaturesGrid>
@@ -38,7 +38,7 @@ const Products = () => (
   </Section>
 )
 
-export default Products
+export default Softwares
 
 const StyledContainer = styled(Container)``
 
@@ -59,7 +59,7 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 670px;
+  max-width: 800px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0px auto;

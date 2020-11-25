@@ -3,26 +3,26 @@ import styled from "styled-components"
 
 import { Section, Container } from "../global"
 
-const Products = () => (
+const Services = () => (
   <Section id="services">
     <StyledContainer>
       <Subtitle>Services</Subtitle>
       <SectionTitle>We Automate and Develop</SectionTitle>
         <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Web Applications</FeatureTitle>
+          <FeatureTitle>Web Apps</FeatureTitle>
           <FeatureText>
             Apps that needed to be live on the internet. Ready to deploy.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Standalone Softwares</FeatureTitle>
+          <FeatureTitle>Standalone</FeatureTitle>
           <FeatureText>
             Softwares that runs on local environments.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>IoT Systems</FeatureTitle>
+          <FeatureTitle>IoT</FeatureTitle>
           <FeatureText>
            Solution that is made for realtime applications running on embedded devices.
           </FeatureText>
@@ -34,13 +34,13 @@ const Products = () => (
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>eCommerce Systems</FeatureTitle>
+          <FeatureTitle>eCommerce</FeatureTitle>
           <FeatureText>
             We can help you connect your customers to your business.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Enterprise Solutions</FeatureTitle>
+          <FeatureTitle>Enterprise</FeatureTitle>
           <FeatureText>
             Business problems that persists, we are here to help.
           </FeatureText>
@@ -50,7 +50,7 @@ const Products = () => (
   </Section>
 )
 
-export default Products
+export default Services
 
 const StyledContainer = styled(Container)``
 
