@@ -14,7 +14,7 @@ const Softwares = () => {
           }
         }
       }
-      accountingImg: file(relativePath: { eq: "accounting-100.png" }) {
+      accImg: file(relativePath: { eq: "accounting-100.png" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -39,7 +39,7 @@ const Softwares = () => {
   `)
   const source = [
     data.posImg.childImageSharp.fluid,
-    data.accountingImg.childImageSharp.fluid,
+    data.accImg.childImageSharp.fluid,
     data.inventoryImg.childImageSharp.fluid,
     data.spacemartImg.childImageSharp.fluid,
   ]
