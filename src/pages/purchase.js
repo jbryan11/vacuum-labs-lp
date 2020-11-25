@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Container, Section } from "../global"
+import { Container, Section } from "../components/global"
 
 const Purchase = () => (
   <StyledSection>
