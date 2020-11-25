@@ -37,9 +37,9 @@ const theme = {
       darker: "#eeeeee",
     },
     black: {
-      lightest: "#ABA8AF",
-      light: "#564F62",
-      regular: "#071435",
+      lightest: "050B2B",
+      light: "#cca86e",
+      regular: "35B2E8",
     },
   },
   screen: {
