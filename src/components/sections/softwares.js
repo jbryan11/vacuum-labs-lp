@@ -3,12 +3,13 @@ import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Section, Container } from "../global"
 import Img from "gatsby-image"
+
 const dataImg = useStaticQuery(graphql`
   query {
     file(relativePath: { eq: "gatsby-astronaut.png" }) {
       childImageSharp {
-        fixed(width:80) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth:80, quality:100) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -22,7 +23,7 @@ const Softwares = () => (
       <FeaturesGrid>
         <FeatureItem>
           <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>POS</FeatureTitle>
           <FeatureText>
@@ -31,7 +32,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
@@ -40,7 +41,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>Inventory</FeatureTitle>
           <FeatureText>
@@ -50,7 +51,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
+            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
           </ImageWrapper>
           <FeatureTitle>SpaceMart</FeatureTitle>
           <FeatureText>
