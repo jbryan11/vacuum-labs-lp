@@ -8,7 +8,7 @@ const dataImg = useStaticQuery(graphql`
     file(relativePath: { eq: "gatsby-astronaut.png" }) {
       childImageSharp {
         fixed(width:100) {
-          ...GatsbyImageSharpFixed_tracedSVG
+          ...GatsbyImageSharpFixed
         }
       }
     }
