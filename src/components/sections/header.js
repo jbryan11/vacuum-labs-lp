@@ -38,13 +38,13 @@ const Header = () => {
               products to its full capacity.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
-              <HeaderButton onSubmit={handleSubmit}>Get Started
+              <HeaderButton href="#services">Get Started
               </HeaderButton>
             </HeaderForm>
             <FormSubtitle>
               Let us help you and your business
-              <FormSubtitleLink to="/contact/">Cotact Us</FormSubtitleLink>
-            </FormSubtitle>n
+              <FormSubtitleLink to="#contact">Contact Us</FormSubtitleLink>
+            </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={headImg.file.childImageSharp.fluid} />
