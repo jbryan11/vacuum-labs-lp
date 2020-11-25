@@ -4,66 +4,93 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { Section, Container } from "../global"
 
-
 const Softwares = () => {
-  const dataImg = useStaticQuery(graphql`
-  query {
-    file(relativePath: { eq: "gatsby-astronaut.png" }) {
-      childImageSharp {
-        fluid(maxWidth:80, quality:100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+  const data = useStaticQuery(graphql`
+    query {
+      posImg: file(relativePath: { eq: "pos-terminal-100.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      accImg: file(relativePath: { eq: "accounting-100.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      inventoryImg: file(relativePath: { eq: "inventory-64.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 98, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      spacemartImg: file(relativePath: { eq: "online-shop-100.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
     }
-  }
-`)
-return(
-  <Section id="softwares">
-    <StyledContainer>
-      <Subtitle>Softwares</Subtitle>
-      <SectionTitle>Software as a Service</SectionTitle>
-      <FeaturesGrid>
-        <FeatureItem>
-          <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>POS</FeatureTitle>
-          <FeatureText>
-            A cashier's friend. Manages payments and services in your store.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>Accounting</FeatureTitle>
-          <FeatureText>
-            Keep your finances on track. No more manual computations needed.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>Inventory</FeatureTitle>
-          <FeatureText>
-            Keep records of your stocks and products to monitor daily
-            consumptions.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>SpaceMart</FeatureTitle>
-          <FeatureText>
-            An ecommerce site that you can sell your items all around the globe.
-          </FeatureText>
-        </FeatureItem>
-      </FeaturesGrid>
-    </StyledContainer>
-  </Section>
-)
+  `)
+  const source = [
+    data.posImg.childImageSharp.fluid,
+    data.accImg.childImageSharp.fluid,
+    data.inventoryImg.childImageSharp.fluid,
+    data.spacemartImg.childImageSharp.fluid,
+  ]
+  return (
+    <Section id="softwares">
+      <StyledContainer>
+        <Subtitle>Softwares</Subtitle>
+        <SectionTitle>Software as a Service</SectionTitle>
+        <FeaturesGrid>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[0]} />
+            </ImageWrapper>
+            <FeatureTitle>POS</FeatureTitle>
+            <FeatureText>
+              A cashier's friend. Manages payments and services in your store.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[1]} />
+            </ImageWrapper>
+            <FeatureTitle>Accounting</FeatureTitle>
+            <FeatureText>
+              Keep your finances on track. No more manual computations needed.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[2]} />
+            </ImageWrapper>
+            <FeatureTitle>Inventory</FeatureTitle>
+            <FeatureText>
+              Keep records of your stocks and products to monitor daily
+              consumptions.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[3]} />
+            </ImageWrapper>
+            <FeatureTitle>SpaceMart</FeatureTitle>
+            <FeatureText>
+              An ecommerce site that you can sell your items all around the
+              globe.
+            </FeatureText>
+          </FeatureItem>
+        </FeaturesGrid>
+      </StyledContainer>
+    </Section>
+  )
 }
 export default Softwares
 

@@ -5,80 +5,126 @@ import Img from "gatsby-image"
 import { Section, Container } from "../global"
 
 const Services = () => {
-  const dataImg = useStaticQuery(graphql`
-  query {
-    file(relativePath: { eq: "gatsby-astronaut.png" }) {
-      childImageSharp {
-        fluid(maxWidth:80, quality:100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+  const data = useStaticQuery(graphql`
+    query {
+      webappImg: file(relativePath: { eq: "today-apps-30.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 90, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+
+      standaloneImg: file(relativePath: { eq: "software-30.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 80, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+
+      iotImg: file(relativePath: { eq: "iot-sensor-50.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      cmsImg: file(relativePath: { eq: "plesk-50.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      ecommImg: file(relativePath: { eq: "online-shop-64.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 98, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      entrImg: file(
+        relativePath: { eq: "enterprise-resource-planning-64.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 98, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
         }
       }
     }
-  }
-`)
-  return(
-  <Section id="services">
-    <StyledContainer>
-      <Subtitle>Services</Subtitle>
-      <SectionTitle>We Automate and Develop</SectionTitle>
+  `)
+  const sources = [
+    data.webappImg.childImageSharp.fluid,
+    data.standaloneImg.childImageSharp.fluid,
+    data.iotImg.childImageSharp.fluid,
+    data.cmsImg.childImageSharp.fluid,
+    data.ecommImg.childImageSharp.fluid,
+    data.entrImg.childImageSharp.fluid,
+  ]
+  return (
+    <Section id="services">
+      <StyledContainer>
+        <Subtitle>Services</Subtitle>
+        <SectionTitle>We Automate and Develop</SectionTitle>
         <FeaturesGrid>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>Web Apps</FeatureTitle>
-          <FeatureText>
-            Apps that needed to be live on the internet. Ready to deploy.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>Standalone</FeatureTitle>
-          <FeatureText>
-            Softwares that runs on local environments.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>IoT</FeatureTitle>
-          <FeatureText>
-           Solution that is made for realtime applications running on embedded devices.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>CMS</FeatureTitle>
-          <FeatureText>
-            Manage your content around the web.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>eCommerce</FeatureTitle>
-          <FeatureText>
-            We can help you connect your customers to your business.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-        <ImageWrapper>
-            <SoftwareImage fluid={dataImg.file.childImageSharp.fluid} />
-          </ImageWrapper>
-          <FeatureTitle>Enterprise</FeatureTitle>
-          <FeatureText>
-            Business problems that persists, we are here to help.
-          </FeatureText>
-        </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[0]} />
+            </ImageWrapper>
+            <FeatureTitle>Web Apps</FeatureTitle>
+            <FeatureText>
+              Apps that needed to be live on the internet. Ready to deploy.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[1]} />
+            </ImageWrapper>
+            <FeatureTitle>Standalone</FeatureTitle>
+            <FeatureText>
+              Softwares that runs on local environments.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[2]} />
+            </ImageWrapper>
+            <FeatureTitle>IoT</FeatureTitle>
+            <FeatureText>
+              Solution that is made for realtime applications running on
+              embedded devices.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[3]} />
+            </ImageWrapper>
+            <FeatureTitle>CMS</FeatureTitle>
+            <FeatureText>Manage your content around the web.</FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[4]} />
+            </ImageWrapper>
+            <FeatureTitle>eCommerce</FeatureTitle>
+            <FeatureText>
+              We can help you connect your customers to your business.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={sources[5]} />
+            </ImageWrapper>
+            <FeatureTitle>Enterprise</FeatureTitle>
+            <FeatureText>
+              Business problems that persists, we are here to help.
+            </FeatureText>
+          </FeatureItem>
         </FeaturesGrid>
-    </StyledContainer>
-  </Section>
+      </StyledContainer>
+    </Section>
   )
 }
 
@@ -87,7 +133,7 @@ export default Services
 const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
@@ -96,7 +142,7 @@ const SectionTitle = styled.h3`
 
 const Subtitle = styled.h5`
   font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
@@ -109,7 +155,7 @@ const FeaturesGrid = styled.div`
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
   }
@@ -117,13 +163,13 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 `
 
 const FeatureTitle = styled.h4`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;

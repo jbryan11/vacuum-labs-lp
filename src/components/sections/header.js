@@ -43,8 +43,8 @@ const Header = () => {
             </HeaderForm>
             <FormSubtitle>
               Let us help you and your business
-              <FormSubtitleLink to="/contact/">Contact Us</FormSubtitleLink>
-            </FormSubtitle>
+              <FormSubtitleLink to="/contact/">Cotact Us</FormSubtitleLink>
+            </FormSubtitle>n
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={headImg.file.childImageSharp.fluid} />
