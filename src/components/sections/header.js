@@ -10,7 +10,7 @@ const Header = () => {
     query {
       file(relativePath: { eq: "product/vacuum-logo.png" }) {
         childImageSharp {      
-          fluid(maxWidth:1000) {
+          fluid(maxWidth:500) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -38,10 +38,7 @@ const Header = () => {
               products to its full capacity.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
-              <HeaderButton>
-                <Link to="mailto:vacuum-labs@gmail.com?subject=Where to start? Im in!">
-                  Get Started
-                </Link>
+              <HeaderButton href="mailto:vacuum-labs@gmail.com?subject=Where to start? Im in!">
               </HeaderButton>
             </HeaderForm>
             <FormSubtitle>
