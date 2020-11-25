@@ -22,7 +22,7 @@ const Softwares = () => (
       <FeaturesGrid>
         <FeatureItem>
           <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>POS</FeatureTitle>
           <FeatureText>
@@ -31,7 +31,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
@@ -40,7 +40,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>Inventory</FeatureTitle>
           <FeatureText>
@@ -50,7 +50,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.childImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>SpaceMart</FeatureTitle>
           <FeatureText>
