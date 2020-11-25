@@ -10,8 +10,8 @@ const Header = () => {
     query {
       file(relativePath: { eq: "product/vacuum-logo.png" }) {
         childImageSharp {      
-          fluid(max-width:1000px) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth:1000px) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
