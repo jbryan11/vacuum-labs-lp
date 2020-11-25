@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Section, Container } from "../global"
-const softwareImage = useStaticQuery(graphql`
+const dataImg = useStaticQuery(graphql`
   query {
     file(relativePath: { eq: "gatsby-astronaut.png" }) {
       childImageSharp {
@@ -21,7 +21,7 @@ const Softwares = () => (
       <FeaturesGrid>
         <FeatureItem>
           <ImageWrapper>
-            <SoftwareImage fixed={softwareImage.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>POS</FeatureTitle>
           <FeatureText>
@@ -30,7 +30,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={softwareImage.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>Accounting</FeatureTitle>
           <FeatureText>
@@ -39,7 +39,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={softwareImage.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>Inventory</FeatureTitle>
           <FeatureText>
@@ -49,7 +49,7 @@ const Softwares = () => (
         </FeatureItem>
         <FeatureItem>
         <ImageWrapper>
-            <SoftwareImage fixed={softwareImage.file.chilImageSharp.fixed} />
+            <SoftwareImage fixed={dataImg.file.chilImageSharp.fixed} />
           </ImageWrapper>
           <FeatureTitle>SpaceMart</FeatureTitle>
           <FeatureText>
