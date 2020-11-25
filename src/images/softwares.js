@@ -2,117 +2,84 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Section, Container } from "../global"
+import { Section, Container } from "../components/global"
 
-const Services = () => {
+const Softwares = () => {
   const data = useStaticQuery(graphql`
     query {
-      webappImg: file(relativePath: { eq: "today-apps-30.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 90, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-
-      standaloneImg: file(relativePath: { eq: "software-30.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 80, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-
-      iotImg: file(relativePath: { eq: "iot-sensor-50.png" }) {
+      file(relativePath: { eq: "pos-terminal-100.png" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      cmsImg: file(relativePath: { eq: "plesk-50.png" }) {
+      accountingImg: file(relativePath: { eq: "accounting-100.png" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      ecommImg: file(relativePath: { eq: "online-shop-64.png" }) {
+      inventoryImg: file(relativePath: { eq: "inventory-64.png" }) {
         childImageSharp {
           fluid(maxWidth: 98, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      entrImg: file(
-        relativePath: { eq: "enterprise-resource-planning-64.png" }
-      ) {
+      spacemartImg: file(relativePath: { eq: "online-shop-100.png" }) {
         childImageSharp {
-          fluid(maxWidth: 98, quality: 100) {
+          fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
     }
   `)
-  const sources = [...data]
+  const source = [...data]
   return (
-    <Section id="services">
+    <Section id="softwares">
       <StyledContainer>
-        <Subtitle>Services</Subtitle>
-        <SectionTitle>We Automate and Develop</SectionTitle>
+        <Subtitle>Softwares</Subtitle>
+        <SectionTitle>Software as a Service</SectionTitle>
         <FeaturesGrid>
           <FeatureItem>
             <ImageWrapper>
-              <SoftwareImage fluid={sources[0]} />
+              <SoftwareImage fluid={source[0]} />
             </ImageWrapper>
-            <FeatureTitle>Web Apps</FeatureTitle>
+            <FeatureTitle>POS</FeatureTitle>
             <FeatureText>
-              Apps that needed to be live on the internet. Ready to deploy.
+              A cashier's friend. Manages payments and services in your store.
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
             <ImageWrapper>
-              <SoftwareImage fluid={sources[1]} />
+              <SoftwareImage fluid={source[1]} />
             </ImageWrapper>
-            <FeatureTitle>Standalone</FeatureTitle>
+            <FeatureTitle>Accounting</FeatureTitle>
             <FeatureText>
-              Softwares that runs on local environments.
+              Keep your finances on track. No more manual computations needed.
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
             <ImageWrapper>
-              <SoftwareImage fluid={sources[2]} />
+              <SoftwareImage fluid={source[2]} />
             </ImageWrapper>
-            <FeatureTitle>IoT</FeatureTitle>
+            <FeatureTitle>Inventory</FeatureTitle>
             <FeatureText>
-              Solution that is made for realtime applications running on
-              embedded devices.
+              Keep records of your stocks and products to monitor daily
+              consumptions.
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
             <ImageWrapper>
-              <SoftwareImage fluid={sources[3]} />
+              <SoftwareImage fluid={source[3]} />
             </ImageWrapper>
-            <FeatureTitle>CMS</FeatureTitle>
-            <FeatureText>Manage your content around the web.</FeatureText>
-          </FeatureItem>
-          <FeatureItem>
-            <ImageWrapper>
-              <SoftwareImage fluid={sources[4]} />
-            </ImageWrapper>
-            <FeatureTitle>eCommerce</FeatureTitle>
+            <FeatureTitle>SpaceMart</FeatureTitle>
             <FeatureText>
-              We can help you connect your customers to your business.
-            </FeatureText>
-          </FeatureItem>
-          <FeatureItem>
-            <ImageWrapper>
-              <SoftwareImage fluid={sources[5]} />
-            </ImageWrapper>
-            <FeatureTitle>Enterprise</FeatureTitle>
-            <FeatureText>
-              Business problems that persists, we are here to help.
+              An ecommerce site that you can sell your items all around the
+              globe.
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -120,8 +87,7 @@ const Services = () => {
     </Section>
   )
 }
-
-export default Services
+export default Softwares
 
 const StyledContainer = styled(Container)``
 
@@ -142,9 +108,9 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 670px;
+  max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -168,9 +134,6 @@ const FeatureTitle = styled.h4`
   margin-bottom: 10px;
 `
 
-const FeatureText = styled.p`
-  text-align: center;
-`
 const SoftwareImage = styled(Img)`
   width: 100px;
   @media (max-width: ${(props) => props.theme.screen.md}) {
@@ -187,4 +150,7 @@ const ImageWrapper = styled.div`
   @media (max-width: ${(props) => props.theme.screen.md}) {
     justify-self: center;
   }
+`
+const FeatureText = styled.p`
+  text-align: center;
 `
