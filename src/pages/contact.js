@@ -6,7 +6,7 @@ import Navigation from "../components/common/navigation/navigation"
 import Contact from "../components/sections/contact"
 const ContactUs =()=>(
 <Layout>
-    <Seo title="Contact Us"/>
+    <SEO title="Contact Us"/>
     <Navigation />
     <Contact/>
 </Layout>
