@@ -7,36 +7,43 @@ const Footer = () => (
   <FooterWrapper id="footer">
     <FooterColumnContainer>
       <FooterColumn>
-        <span>Features</span>
+        <span>Services</span>
         <ul>
-          <li>Automation</li>
-          <li>Rewards</li>
+          <li>Web Apps</li>
+          <li>Standalone</li>
+          <li>IoT</li>
+          <li>CMS</li>
+          <li>eCommerce</li>
+          <li>Enterprise</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
-        <span>Resources</span>
+        <span>Softwares</span>
         <ul>
-          <li>Compare</li>
-          <li>Blog</li>
+          <li>POS</li>
+          <li>Accounting</li>
+          <li>Inventory</li>
+          <li>SpaceMart</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
         <span>Company</span>
         <ul>
           <li>About Us</li>
-          <li>Careers</li>
+          <li>Contact</li>
         </ul>
       </FooterColumn>
       <FooterColumn>
         <span>Social</span>
         <ul>
-          <li>LinkedIn</li>
+          <li>Facebook</li>
           <li>Instagram</li>
+          <li>Twitter</li>
         </ul>
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>Vacuum Labs</Logo>
     </BrandContainer>
   </FooterWrapper>
 )
