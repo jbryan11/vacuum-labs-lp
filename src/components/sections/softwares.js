@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { Section, Container } from "../global"
 const dataImg = useStaticQuery(graphql`
   query {
