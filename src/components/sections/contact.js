@@ -7,7 +7,7 @@ const Contact = () => (
   <StyledSection id="contact">
     <ContactContainer>
       <ContactTitle>Contact Us</ContactTitle>
-      <TryItButton>We circle around the Globe.</TryItButton>
+      <TryItButton>VacuumLabs@gmail.com</TryItButton>
       <Subtitle>No credit card required.</Subtitle>
     </ContactContainer>
   </StyledSection>
