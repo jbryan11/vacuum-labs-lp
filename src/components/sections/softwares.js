@@ -4,7 +4,9 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { Section, Container } from "../global"
 import Img from "gatsby-image"
 
-const dataImg = useStaticQuery(graphql`
+
+const Softwares = () => {
+  const dataImg = useStaticQuery(graphql`
   query {
     file(relativePath: { eq: "gatsby-astronaut.png" }) {
       childImageSharp {
@@ -15,7 +17,7 @@ const dataImg = useStaticQuery(graphql`
     }
   }
 `)
-const Softwares = () => (
+return(
   <Section id="softwares">
     <StyledContainer>
       <Subtitle>Softwares</Subtitle>
@@ -62,7 +64,7 @@ const Softwares = () => (
     </StyledContainer>
   </Section>
 )
-
+}
 export default Softwares
 
 const StyledContainer = styled(Container)``
