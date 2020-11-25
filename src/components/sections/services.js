@@ -55,7 +55,14 @@ const Services = () => {
       }
     }
   `)
-  const sources = [...data]
+  const sources = [
+    data.webappImg.childImageSharp.fluid,
+    data.standaloneImg.childImageSharp.fluid,
+    data.iotImg.childImageSharp.fluid,
+    data.cmsImg.childImageSharp.fluid,
+    data.ecommImg.childImageSharp.fluid,
+    data.entrImg.childImageSharp.fluid,
+  ]
   return (
     <Section id="services">
       <StyledContainer>

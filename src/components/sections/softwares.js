@@ -7,7 +7,7 @@ import { Section, Container } from "../global"
 const Softwares = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "pos-terminal-100.png" }) {
+      posImg: file(relativePath: { eq: "pos-terminal-100.png" }) {
         childImageSharp {
           fluid(maxWidth: 100, quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -37,7 +37,12 @@ const Softwares = () => {
       }
     }
   `)
-  const source = [...data]
+  const source = [
+    data.posImg.childImageSharp.fluid,
+    data.accountingImg.childImageSharp.fluid,
+    data.inventoryImg.childImageSharp.fluid,
+    data.spacemartImg.childImageSharp.fluid,
+  ]
   return (
     <Section id="softwares">
       <StyledContainer>
