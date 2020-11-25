@@ -4,8 +4,8 @@ import styled from "styled-components"
 import { Container, Section } from "../global"
 
 const Contact = () => (
-  <StyledSection>
-    <ContactContainer id="contact">
+  <StyledSection id="contact">
+    <ContactContainer>
       <ContactTitle>Contact Us</ContactTitle>
       <TryItButton>We circle around the Globe.</TryItButton>
       <Subtitle>No credit card required.</Subtitle>

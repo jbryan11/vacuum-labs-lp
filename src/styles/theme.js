@@ -23,11 +23,11 @@ const theme = {
   },
 
   color: {
-    primary: "#071435",
-    secondary: "#098c8c",
+    primary: "050B2B",
+    secondary: "35B2E8",
     accent: "#cca86e",
     background: {
-      white: "#ffffff",
+      white: "043C54",
       light: "#f8f8f8",
     },
     white: {
