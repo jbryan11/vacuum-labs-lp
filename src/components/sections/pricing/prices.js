@@ -77,16 +77,6 @@ const Softwares = () => {
               consumptions.
             </FeatureText>
           </FeatureItem>
-          <FeatureItem>
-            <ImageWrapper>
-              <SoftwareImage fluid={source[3]} />
-            </ImageWrapper>
-            <FeatureTitle>SpaceMart</FeatureTitle>
-            <FeatureText>
-              An ecommerce site that you can sell your items all around the
-              globe.
-            </FeatureText>
-          </FeatureItem>
         </FeaturesGrid>
       </StyledContainer>
     </Section>
