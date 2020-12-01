@@ -77,16 +77,6 @@ const Softwares = () => {
               consumptions.
             </FeatureText>
           </FeatureItem>
-          <FeatureItem>
-            <ImageWrapper>
-              <SoftwareImage fluid={source[3]} />
-            </ImageWrapper>
-            <FeatureTitle>SpaceMart</FeatureTitle>
-            <FeatureText>
-              An ecommerce site that you can sell your items all around the
-              globe.
-            </FeatureText>
-          </FeatureItem>
         </FeaturesGrid>
       </StyledContainer>
     </Section>
@@ -115,7 +105,7 @@ const Subtitle = styled.h5`
 const FeaturesGrid = styled.div`
   max-width: 800px;
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-columns: 2fr 2fr 2fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
