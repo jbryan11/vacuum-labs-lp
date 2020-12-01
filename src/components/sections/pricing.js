@@ -63,21 +63,11 @@ const Pricing = () => {
             <FeatureTitle>POS</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            1GiB of total Storage<br/>
-            5GiB of network egress per month<br/>
-            5 users<br/>
+            
             <Subtitle>Business Plan</Subtitle>
-            Includes <b>free perks</b><br/>
-            PHP 2.00 per 500MB of Storage (free perks excluded)<br/>
-            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
-            10 users (PHP 499.00 / month)<br/>
-            include Analytics (PHP 100.00 / month)
-            include Mobile Payments support (PHP 250.00 / month)
+            
             <Subtitle>Enterprise Plan</Subtitle>
-            includes <b>Business Plan</b><br/>
-            Custom Domain Site<br/>
-            Customized user access<br/>
-            24/7 support<br/>
+           
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -87,21 +77,11 @@ const Pricing = () => {
             <FeatureTitle>Accounting</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            1GiB of total Storage<br/>
-            5GiB of network egress per month<br/>
-            5 users<br/>
+            
             <Subtitle>Business Plan</Subtitle>
-            Includes <b>free perks</b><br/>
-            PHP 2.00 per 500MB of Storage (free perks excluded)<br/>
-            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
-            10users (PHP 499.00 / month)<br/>
-            include Analytics (PHP 100.00 / month)
-            include Mobile Payments support (PHP 250.00 / month)
+            
             <Subtitle>Enterprise Plan</Subtitle>
-            includes <b>Business Plan</b><br/>
-            Custom Domain Site<br/>
-            Customized user access<br/>
-            24/7 support<br/>
+            
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -111,21 +91,11 @@ const Pricing = () => {
             <FeatureTitle>Inventory</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            1GiB of total Storage<br/>
-            5GiB of network egress per month<br/>
-            5  users<br/>
+            
             <Subtitle>Business Plan</Subtitle>
-            Includes <b>free perks</b><br/>
-            PHP 2.00 per 500MB of Storage (free perks excluded)<br/>
-            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
-            10 users (PHP 499.00 / user / month)<br/>
-            PHP 5.00 per Mobile Payment Transactions<br/>
-            include Analytics<br/> 
+            
             <Subtitle>Enterprise Plan</Subtitle>
-            includes <b>Business Plan</b><br/>
-            Custom Domain Site<br/>
-            Customized user access<br/>
-            24/7 support<br/>
+            
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -201,8 +171,9 @@ const FeatureText = styled.p`
   text-align: center;
 `
 const InfoSubtitle = styled.h6`
+  display:flex;
   text-align:center;
-  max-width:800px;
+  justify-content:center;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 12px;

@@ -201,11 +201,13 @@ const ImageWrapper = styled.div`
   }
 `
 const InfoSubtitle = styled.h6`
-max-width:800px;
+display:flex;
+  text-align:center;
+  justify-content:center;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 12px;
-  text-align: center;
+ 
 `
 const Details = styled.p`
   max-width: 800px;
