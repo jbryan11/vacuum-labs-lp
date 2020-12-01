@@ -42,7 +42,7 @@ const Header = () => {
                 item={["contact"]}
                 currentClassName="active"
               >
-                <AnchorLink href="#contact" onClick={this.closeMobileMenu}>
+                <AnchorLink href="#contact">
                   <HeaderButton>Get Started</HeaderButton>
                 </AnchorLink>
               </Scrollspy>
