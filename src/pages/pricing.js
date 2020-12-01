@@ -14,4 +14,4 @@ const Pricing = () => (
   </Layout>
 )
 
-export default IndexPage
+export default Pricing
