@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { Container } from "../../global"
 import {
@@ -16,7 +16,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features","Services", "Softwares","Pricing", "About"]
+const NAV_ITEMS = ["Features", "Services", "Softwares","Pricing", "About"]
 
 export default class Navigation extends Component {
   state = {
@@ -28,7 +28,7 @@ export default class Navigation extends Component {
     window.addEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll = event => {
+  handleScroll = (event) => {
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 32) {
@@ -39,7 +39,9 @@ export default class Navigation extends Component {
   }
 
   toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }))
+    this.setState((prevState) => ({
+      mobileMenuOpen: !prevState.mobileMenuOpen,
+    }))
   }
 
   closeMobileMenu = () => {
@@ -48,7 +50,7 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => (
+  getNavAnchorLink = (item) => (
     <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
@@ -57,12 +59,12 @@ export default class Navigation extends Component {
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map((item) => item.toLowerCase())}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
-        {NAV_ITEMS.map(navItem => (
+        {NAV_ITEMS.map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
@@ -97,7 +99,11 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-           <ButtonLink to="/contact/"><button>Contact Us</button></ButtonLink>
+          <Scrollspy offset={-64} item={["contact"]} currentClassName="active">
+              <AnchorLink href="#contact" onClick={this.closeMobileMenu}>
+                <button>Contact Us</button>
+              </AnchorLink>
+            </Scrollspy>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
@@ -111,9 +117,4 @@ export default class Navigation extends Component {
     )
   }
 }
-const ButtonLink = styled(Link)`
-  color: white;
-  padding-bottom: 1px;
-  margin-left: 8px;
-  text-decoration: none;
-`
+

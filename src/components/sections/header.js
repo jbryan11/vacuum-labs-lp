@@ -10,8 +10,8 @@ const Header = () => {
   const headImg = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {      
-          fluid(maxWidth:1000) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -34,15 +34,19 @@ const Header = () => {
               Softwares that will help you grow and be productive. Try our
               products to its full capacity.
             </h2>
-            
-            <FormSubtitle>
-              Let us help you and your business
-              <Scrollspy offset={-64} item={["contact"]} currentClassName="active">
-              <AnchorLink href="#contact">
-                Contact Us
-              </AnchorLink>
-            </Scrollspy>
-            </FormSubtitle>
+
+            <FormSubtitle>Let us help you and your business</FormSubtitle>
+            <HeaderForm>
+              <Scrollspy
+                offset={-64}
+                item={["contact"]}
+                currentClassName="active"
+              >
+                <AnchorLink href="#contact" onClick={this.closeMobileMenu}>
+                  <HeaderButton>Get Started</HeaderButton>
+                </AnchorLink>
+              </Scrollspy>
+            </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={headImg.file.childImageSharp.fluid} />
