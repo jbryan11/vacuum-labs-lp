@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
-import { Link } from "gatsby"
-import styled from "styled-components"
+
+
 import { Container } from "../../global"
 import {
   Nav,
@@ -99,11 +99,13 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
+          <Brand>
           <Scrollspy offset={-64} item={["contact"]} currentClassName="active">
               <AnchorLink href="#contact" onClick={this.closeMobileMenu}>
                 <button>Contact Us</button>
               </AnchorLink>
             </Scrollspy>
+          </Brand>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
