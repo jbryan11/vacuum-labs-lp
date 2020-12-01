@@ -37,10 +37,7 @@ const Header = () => {
               Softwares that will help you grow and be productive. Try our
               products to its full capacity.
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderButton href="#services">Get Started
-              </HeaderButton>
-            </HeaderForm>
+            
             <FormSubtitle>
               Let us help you and your business
               <FormSubtitleLink to="#contact">Contact Us</FormSubtitleLink>

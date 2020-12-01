@@ -54,7 +54,6 @@ const Softwares = () => {
               <SoftwareImage fluid={source[0]} />
             </ImageWrapper>
             <FeatureTitle>POS</FeatureTitle>
-            <Subtitle>PHP 999/month</Subtitle>
             <FeatureText>
               A cashier's friend. Manages payments and services in your store.
             </FeatureText>
@@ -64,7 +63,6 @@ const Softwares = () => {
               <SoftwareImage fluid={source[1]} />
             </ImageWrapper>
             <FeatureTitle>Accounting</FeatureTitle>
-            <Subtitle>PHP 799/month</Subtitle>
             <FeatureText>
               Keep your finances on track. No more manual computations needed.
             </FeatureText>
@@ -74,10 +72,19 @@ const Softwares = () => {
               <SoftwareImage fluid={source[2]} />
             </ImageWrapper>
             <FeatureTitle>Inventory</FeatureTitle>
-            <Subtitle>PHP 1,199/month</Subtitle>
             <FeatureText>
               Keep records of your stocks and products to monitor daily
               consumptions.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[3]} />
+            </ImageWrapper>
+            <FeatureTitle>SpaceMart</FeatureTitle>
+            <FeatureText>
+              An ecommerce site that you can sell your items all around the
+              globe.
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -151,4 +158,7 @@ const ImageWrapper = styled.div`
 `
 const FeatureText = styled.p`
   text-align: center;
+`
+const featureBullet = styled.ul`
+    list-style-type:none;
 `
