@@ -4,7 +4,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import { Section, Container } from "../global"
 
-const Softwares = () => {
+const Pricing = () => {
   const data = useStaticQuery(graphql`
     query {
       posImg: file(relativePath: { eq: "pos-terminal-100.png" }) {
@@ -44,10 +44,10 @@ const Softwares = () => {
     data.spacemartImg.childImageSharp.fluid,
   ]
   return (
-    <Section id="softwares">
+    <Section id="pricing">
       <StyledContainer>
-        <Subtitle>Softwares</Subtitle>
-        <SectionTitle>Software as a Service</SectionTitle>
+        <Subtitle>Pricing</Subtitle>
+        <SectionTitle>We give you free perks, and pay as you go.</SectionTitle>
         <FeaturesGrid>
           <FeatureItem>
             <ImageWrapper>
@@ -82,7 +82,7 @@ const Softwares = () => {
     </Section>
   )
 }
-export default Softwares
+export default Pricing
 
 const StyledContainer = styled(Container)``
 
@@ -105,7 +105,7 @@ const Subtitle = styled.h5`
 const FeaturesGrid = styled.div`
   max-width: 800px;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 5fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -118,7 +118,7 @@ const FeaturesGrid = styled.div`
 const FeatureItem = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 `
 

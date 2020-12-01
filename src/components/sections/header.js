@@ -38,6 +38,7 @@ const Header = () => {
 
             <FormSubtitle>Let us help you and your business</FormSubtitle>
             <HeaderForm>
+            <Brand>
               <Scrollspy
                 offset={-64}
                 item={["contact"]}
@@ -47,6 +48,7 @@ const Header = () => {
                   <HeaderButton>Get Started</HeaderButton>
                 </AnchorLink>
               </Scrollspy>
+              </Brand>
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
