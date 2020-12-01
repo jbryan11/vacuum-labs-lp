@@ -63,9 +63,21 @@ const Pricing = () => {
             <FeatureTitle>POS</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            2GiB total of stored data<br/>
-            10GiB of network egress per month<br/>
+            1GiB total of stored data<br/>
+            5GiB of network egress per month<br/>
             5 maximum users<br/>
+            <Subtitle>Business Plan</Subtitle>
+            Includes <b>free perks</b><br/>
+            PHP 2.00 per 500MB of stored data (free perks excluded)<br/>
+            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
+            10 maximum users (PHP 499.00 / month)<br/>
+            include Analytics (PHP 100.00 / month)
+            include Mobile Payments support (PHP 250.00 / month)
+            <Subtitle>Enterprise Plan</Subtitle>
+            includes <b>Business Plan</b><br/>
+            Custom Domain Site<br/>
+            Customized user access<br/>
+            24/7 support<br/>
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -75,9 +87,21 @@ const Pricing = () => {
             <FeatureTitle>Accounting</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            2GiB total of stored data<br/>
-            10GiB of network egress per month<br/>
+            1GiB total of stored data<br/>
+            5GiB of network egress per month<br/>
             5 maximum users<br/>
+            <Subtitle>Business Plan</Subtitle>
+            Includes <b>free perks</b><br/>
+            PHP 2.00 per 500MB of stored data (free perks excluded)<br/>
+            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
+            10 maximum users (PHP 499.00 / month)<br/>
+            include Analytics (PHP 100.00 / month)
+            include Mobile Payments support (PHP 250.00 / month)
+            <Subtitle>Enterprise Plan</Subtitle>
+            includes <b>Business Plan</b><br/>
+            Custom Domain Site<br/>
+            Customized user access<br/>
+            24/7 support<br/>
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -87,9 +111,21 @@ const Pricing = () => {
             <FeatureTitle>Inventory</FeatureTitle>
             <FeatureText>
             <Subtitle>Free Perks</Subtitle>
-            2GiB total of stored data<br/>
-            10GiB of network egress per month<br/>
+            1GiB total of stored data<br/>
+            5GiB of network egress per month<br/>
             5 maximum users<br/>
+            <Subtitle>Business Plan</Subtitle>
+            Includes <b>free perks</b><br/>
+            PHP 2.00 per 500MB of stored data (free perks excluded)<br/>
+            PHP 20.00 per 5GB of network egress per month(free perks excluded)<br/>
+            10 maximum users (PHP 499.00 / month)<br/>
+            include Analytics (PHP 100.00 / month)
+            include Mobile Payments support (PHP 250.00 / month)
+            <Subtitle>Enterprise Plan</Subtitle>
+            includes <b>Business Plan</b><br/>
+            Custom Domain Site<br/>
+            Customized user access<br/>
+            24/7 support<br/>
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -165,6 +201,7 @@ const FeatureText = styled.p`
   text-align: center;
 `
 const InfoSubtitle = styled.p`
+max-width:800px;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 1px;
