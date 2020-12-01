@@ -44,7 +44,7 @@ const Header = () => {
                 item={["contact"]}
                 currentClassName="active"
               >
-                <AnchorLink href="#contact">
+                <AnchorLink href="#features">
                   <HeaderButton>Get Started</HeaderButton>
                 </AnchorLink>
               </Scrollspy>
@@ -166,13 +166,14 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
+  margin-top: 8px;
+  margin-bottom:8px;
   font-weight: 500;
   font-size: 14px;
   color: white;
   letter-spacing: 1px;
   height: 60px;
   display: block;
-  margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;

@@ -105,7 +105,7 @@ const Subtitle = styled.h5`
 const FeaturesGrid = styled.div`
   max-width: 800px;
   display: grid;
-  grid-template-columns: 5fr;
+  grid-template-columns: 2.5fr 2.5fr 2.5fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -118,7 +118,7 @@ const FeaturesGrid = styled.div`
 const FeatureItem = styled.div`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 `
 
