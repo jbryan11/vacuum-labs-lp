@@ -1,5 +1,4 @@
 // Theme
-
 const theme = {
   font: {
     primary: `'HK Grotesk Normal'`,

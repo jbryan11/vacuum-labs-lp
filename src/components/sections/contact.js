@@ -8,7 +8,7 @@ const Contact = () => (
     <ContactContainer>
       <ContactTitle>Contact Us</ContactTitle>
       <TryItButton>VacuumLabs@gmail.com</TryItButton>
-      <Subtitle>No credit card required.</Subtitle>
+      
     </ContactContainer>
   </StyledSection>
 )

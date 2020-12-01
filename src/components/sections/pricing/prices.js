@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Section, Container } from "../global"
+import { Section, Container } from "../../global"
 
 const Softwares = () => {
   const data = useStaticQuery(graphql`
@@ -54,7 +54,6 @@ const Softwares = () => {
               <SoftwareImage fluid={source[0]} />
             </ImageWrapper>
             <FeatureTitle>POS</FeatureTitle>
-            <Subtitle>PHP 999/month</Subtitle>
             <FeatureText>
               A cashier's friend. Manages payments and services in your store.
             </FeatureText>
@@ -64,7 +63,6 @@ const Softwares = () => {
               <SoftwareImage fluid={source[1]} />
             </ImageWrapper>
             <FeatureTitle>Accounting</FeatureTitle>
-            <Subtitle>PHP 799/month</Subtitle>
             <FeatureText>
               Keep your finances on track. No more manual computations needed.
             </FeatureText>
@@ -74,10 +72,19 @@ const Softwares = () => {
               <SoftwareImage fluid={source[2]} />
             </ImageWrapper>
             <FeatureTitle>Inventory</FeatureTitle>
-            <Subtitle>PHP 1,199/month</Subtitle>
             <FeatureText>
               Keep records of your stocks and products to monitor daily
               consumptions.
+            </FeatureText>
+          </FeatureItem>
+          <FeatureItem>
+            <ImageWrapper>
+              <SoftwareImage fluid={source[3]} />
+            </ImageWrapper>
+            <FeatureTitle>SpaceMart</FeatureTitle>
+            <FeatureText>
+              An ecommerce site that you can sell your items all around the
+              globe.
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -108,7 +115,7 @@ const Subtitle = styled.h5`
 const FeaturesGrid = styled.div`
   max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -151,4 +158,7 @@ const ImageWrapper = styled.div`
 `
 const FeatureText = styled.p`
   text-align: center;
+`
+const featureBullet = styled.ul`
+    list-style-type:none;
 `
