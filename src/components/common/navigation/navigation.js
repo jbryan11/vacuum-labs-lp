@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
-
+import {Link} from "gatsby"
+import styled from "styled-components"
 import { Container } from "../../global"
 import {
   Nav,
@@ -15,7 +16,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features","Services", "Softwares", "About"]
+const NAV_ITEMS = ["Features","Services", "Softwares","Pricing", "About"]
 
 export default class Navigation extends Component {
   state = {
@@ -96,7 +97,7 @@ export default class Navigation extends Component {
 
           <Mobile hide>{this.getNavList({})}</Mobile>
           <ActionsContainer>
-            <button>Contact Us</button>
+           <ButtonLink to="/contact/"><button>Contact Us</button></ButtonLink>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>
@@ -110,3 +111,9 @@ export default class Navigation extends Component {
     )
   }
 }
+const ButtonLink = styled(Link)`
+  color: white;
+  padding-bottom: 1px;
+  margin-left: 8px;
+  text-decoration: none;
+`

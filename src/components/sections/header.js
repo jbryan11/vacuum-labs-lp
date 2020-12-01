@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-
+import AnchorLink from "react-anchor-link-smooth-scroll"
+import Scrollspy from "react-scrollspy"
 import { Container } from "../global"
 
 const Header = () => {
@@ -17,10 +18,6 @@ const Header = () => {
       }
     }
   `)
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-  }
 
   return (
     <HeaderWrapper id="top">
@@ -40,7 +37,11 @@ const Header = () => {
             
             <FormSubtitle>
               Let us help you and your business
-              <FormSubtitleLink to="#contact">Contact Us</FormSubtitleLink>
+              <Scrollspy offset={-64} item={["contact"]} currentClassName="active">
+              <AnchorLink href="#contact">
+                Contact Us
+              </AnchorLink>
+            </Scrollspy>
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
