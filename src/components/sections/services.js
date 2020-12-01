@@ -67,7 +67,12 @@ const Services = () => {
     <Section id="services">
       <StyledContainer>
         <Subtitle>Services</Subtitle>
-        <SectionTitle>We Automate and Develop</SectionTitle>
+        <SectionTitle>We Develop and Automate</SectionTitle>
+        <InfoSubtitle>
+          We build, deploy and maintain software solutions for your business needs.
+          Our products comes in a production ready state and ready for you
+          to use it on your daily needs.   
+        </InfoSubtitle>
         <FeaturesGrid>
           <FeatureItem>
             <ImageWrapper>
@@ -194,4 +199,19 @@ const ImageWrapper = styled.div`
   @media (max-width: ${(props) => props.theme.screen.md}) {
     justify-self: center;
   }
+`
+const InfoSubtitle = styled.p`
+  text-align: center;
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  text-align: center;
+`
+const Details = styled.p`
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 12px;
+  text-align: center;
 `
