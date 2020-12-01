@@ -48,6 +48,13 @@ const Pricing = () => {
       <StyledContainer>
         <Subtitle>Pricing</Subtitle>
         <SectionTitle>We give you free perks, and pay as you go.</SectionTitle>
+        <InfoSubtitle>
+          Pay-as-you-go allows you to easily adapt to changing business needs
+          without overcommitting budgets and improving your responsiveness to
+          changes. With a pay-as-you-go model, you can adapt your business
+          depending on need and not on forecasts, reducing the risk of
+          overpositioning or missing capacity.
+        </InfoSubtitle>
         <FeaturesGrid>
           <FeatureItem>
             <ImageWrapper>
@@ -55,7 +62,10 @@ const Pricing = () => {
             </ImageWrapper>
             <FeatureTitle>POS</FeatureTitle>
             <FeatureText>
-              A cashier's friend. Manages payments and services in your store.
+            <Subtitle>Free Perks</Subtitle>
+            2GiB total of stored data<br/>
+            10GiB of network egress per month<br/>
+            5 maximum users<br/>
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -64,7 +74,10 @@ const Pricing = () => {
             </ImageWrapper>
             <FeatureTitle>Accounting</FeatureTitle>
             <FeatureText>
-              Keep your finances on track. No more manual computations needed.
+            <Subtitle>Free Perks</Subtitle>
+            2GiB total of stored data<br/>
+            10GiB of network egress per month<br/>
+            5 maximum users<br/>
             </FeatureText>
           </FeatureItem>
           <FeatureItem>
@@ -73,8 +86,10 @@ const Pricing = () => {
             </ImageWrapper>
             <FeatureTitle>Inventory</FeatureTitle>
             <FeatureText>
-              Keep records of your stocks and products to monitor daily
-              consumptions.
+            <Subtitle>Free Perks</Subtitle>
+            2GiB total of stored data<br/>
+            10GiB of network egress per month<br/>
+            5 maximum users<br/>
             </FeatureText>
           </FeatureItem>
         </FeaturesGrid>
@@ -103,9 +118,9 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   display: grid;
-  grid-template-columns: 2.5fr 2.5fr 2.5fr;
+  grid-template-columns: 3fr 3fr 3fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -149,6 +164,10 @@ const ImageWrapper = styled.div`
 const FeatureText = styled.p`
   text-align: center;
 `
-const featureBullet = styled.ul`
-    list-style-type:none;
+const InfoSubtitle = styled.p`
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-align: center;
 `
