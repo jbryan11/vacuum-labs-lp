@@ -200,16 +200,16 @@ const ImageWrapper = styled.div`
 const FeatureText = styled.p`
   text-align: center;
 `
-const InfoSubtitle = styled.p`
+const InfoSubtitle = styled.h6`
   text-align:center;
   max-width:800px;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 12px;
-  text-align: center;
+  
 `
 const Details = styled.p`
-max-width:800px;
+
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 12px;
