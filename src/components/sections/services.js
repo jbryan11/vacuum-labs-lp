@@ -200,9 +200,8 @@ const ImageWrapper = styled.div`
     justify-self: center;
   }
 `
-const InfoSubtitle = styled.p`
-  text-align: center;
-  max-width: 800px;
+const InfoSubtitle = styled.h6`
+max-width:800px;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 12px;
